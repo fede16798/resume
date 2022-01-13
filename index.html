@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amico, Federico - Curriculum Vitae</title> 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="normalize.css">
     <script src="https://kit.fontawesome.com/003e5f5bc6.js" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="nav">
             <ul class="nav__ul">
                 <li class="nav__li"><a href="#">Inicio</a></li>
-                <li class="nav__li"><a href="#">Sobre mi</a></li>
+                <li class="nav__li"><a href="#about-me">Sobre mi</a></li>
                 <li class="nav__li" ><a href="#">Contactame</a></li>
             </ul>
         </nav>
@@ -26,8 +25,22 @@
             <h1>AMICO, FEDE<span class="efect">RICO MARTIN .</span></h1>
         </div>
         <div class="icon">
-            <i class="fas fa-angle-double-down"></i>
+            <a href="#about-me"><i class="fas fa-angle-double-down"></i></a>
         </div>  
     </header>
+
+    <div class="container" id="about-me">
+        <div class="container__div">
+            <p>Mi nombre es Federico Amico y, como imaginarán, este es mi portafolio. <br>
+            En el año 2018, empecé mis estudios en el Instituto ORT para finalizarlos en el 2020 y obtener mi título de Técnico Analista de Sistemas.<br>
+            Considero que soy una persona muy autoindependiente y autodidacta, que siempre intenta buscar nuevos desafíos para mantenerse motivado ya que creo que es uno de los pilares fundamentales para el constante crecimiento. <br>
+            Durante el año 2021 estuve viviendo en Irlanda donde busqué mejorar mi inglés y mejorar personalmente viviendo en una sociedad diferente a la que estaba acostumbrado. <br>
+            Cuento con experiencia en Sistemas en el Gobierno de la Ciudad de Buenos Aires, en el area de salud.</p>
+        </div>
+        <button class="container__button">
+            <span class="container__span"> Descargar CV </span>
+        </button>
+    </div>
+
 </body>
 </html>

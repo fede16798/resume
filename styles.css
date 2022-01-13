@@ -1,12 +1,19 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 :root {
     --color-header: #EAF2F3;
     --fondo: #ff8d71;
+    --background-body: #f2f2f2;
+    --color-main: rgb(183,76,44);
 }
 
 /*------------------------------HEADER------------------------*/
@@ -38,7 +45,7 @@ header {
     justify-content: space-evenly;
 }
 
-.nav__li a {
+a {
     text-decoration: none;
     color: var(--color-header);
 }
@@ -72,7 +79,6 @@ header {
     font-size: 1.5rem;
     color: var(--color-header);
 }
-
 
 .efect{
     position: relative;
@@ -120,4 +126,85 @@ span {
 
 .icon i:hover {
     transform: scale(1.3);
+}
+
+/*-------------------------------------BODY--------------------------------*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-body);
+
+    padding: 1rem 1.2rem;
+}
+
+.container__div {
+    grid-column: 3/5;
+    grid-row: 1/3;
+
+    border: solid .5rem var(--color-main);
+    border-radius: 5px;
+    padding: .5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    transition: transform 1s;
+}
+
+.container__div:hover{
+    transform: scale(1.02)
+}
+/*BOTON*/
+.container__button {
+    grid-column: 3/5;
+    grid-row: 2/4;
+
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 80px;
+
+    font-family: 'Ubuntu', sans-serif;
+    background: #262626;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+
+    transition: .4s ease all;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+ }
+
+.container__span {
+    font-size: 1.4rem;
+    
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.container__button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    border-bottom: 80px solid var(--color-main);
+    border-right: 80px solid transparent;
+
+    top: -80px;
+    left: calc(-100% - 100px); 
+    transition: .3s ease-in-out all;
+}
+
+.container__button:hover::after {
+    left: 0;
 }

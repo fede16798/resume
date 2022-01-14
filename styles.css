@@ -14,6 +14,10 @@ body {
     --fondo: #ff8d71;
     --background-body: #f2f2f2;
     --color-main: rgb(183,76,44);
+    --color-form: #F7F9F9;
+    --background-footer: rgb(238, 238, 238);
+    --background-form: rgb(228, 228, 228);
+    --background-black: #262626;
 }
 
 /*------------------------------HEADER------------------------*/
@@ -69,7 +73,7 @@ a {
 
 /*NAME BOX*/
 #name-box {
-    grid-row: 2/6;
+    grid-row: 3/4;
     grid-column: 1/5;
 
     display: flex;
@@ -106,6 +110,32 @@ span {
     to {
         width: 0%;
     }   
+}
+
+/*Social network*/
+
+.div {
+    grid-column: 2/4;
+    grid-row: 4/5;
+
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 1rem;
+}
+
+.div__ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+    width: 30%;
+    color: var(--color-header);
+}
+
+.div__li {
+    margin: 1rem;
+    font-size: 3.5rem;
 }
 
 .icon {
@@ -170,7 +200,7 @@ span {
 	height: 80px;
 
     font-family: 'Ubuntu', sans-serif;
-    background: #262626;
+    background: var(--background-black);
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -189,6 +219,29 @@ span {
     z-index: 2;
     transition: .3s ease all;
 }
+/*
+.container__button::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: 1;
+
+    top: 60%;
+    left: 62%;
+    border-radius: 100px;
+
+    transition: .5s ease-in-out all;
+    background: none;  
+    transform-origin: center;
+}
+
+
+.container__button:hover::after {
+    transform: scale(400);
+    background: var(--color-main);
+}
+}*/
 
 .container__button::after {
     content: "";
@@ -207,4 +260,66 @@ span {
 
 .container__button:hover::after {
     left: 0;
+}
+
+/*---------------------------FOOTER-------------------------------------*/
+.footer {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+    width: 100vw;
+    background: var(--background-footer);
+}
+
+.form {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background: var(--background-form);
+}
+
+.form__section {
+    margin: 1.5rem 1rem;
+    font-family: 'Dongle', sans-serif;
+}
+
+.form__section label{
+    display: block;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.form__input {
+    width: 85vw;
+
+    border: none;
+    padding: .3rem;
+    background: #fff;
+    color: #555;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.form__input::placeholder {
+    color: #999;
+}
+
+.form textarea {
+    min-height: 9rem;
+    resize: none;
+}
+
+.form__input:focus {
+    border: 2px solid var(--background-black);
+}
+
+.form__submit {
+    border: none;
+    background: var(--background-black);
+    color: var(--color-header);
+    height: 60px;
+    font-size: 2.5rem;
+    border-radius: 5px;
 }

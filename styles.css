@@ -7,6 +7,8 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    background: var(--background-body);
+
 }
 
 :root {
@@ -18,6 +20,7 @@ body {
     --background-footer: rgb(238, 238, 238);
     --background-form: rgb(228, 228, 228);
     --background-black: #262626;
+    --background-skills: #222;
 }
 
 /*------------------------------HEADER------------------------*/
@@ -161,21 +164,21 @@ span {
 /*-------------------------------------BODY--------------------------------*/
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr .5fr;
     justify-items: center;
     align-items: center;
+    gap: 0.5rem;
 
     width: 100vw;
-    height: 100vh;
-    background: var(--background-body);
+    height: 80vh;
 
     padding: 1rem 1.2rem;
 }
 
 .container__div {
-    grid-column: 3/5;
-    grid-row: 1/3;
+    grid-column: 2/4;
+    grid-row: 1/2;
 
     border: solid .5rem var(--color-main);
     border-radius: 5px;
@@ -183,21 +186,24 @@ span {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.3rem;
     transition: transform 1s;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .container__div:hover{
     transform: scale(1.02)
 }
-/*BOTON*/
+/*BUTTON*/
 .container__button {
-    grid-column: 3/5;
-    grid-row: 2/4;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    align-self: center;
 
     display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 200px;
-	height: 80px;
+	
+    padding: 1.5rem;
 
     font-family: 'Ubuntu', sans-serif;
     background: var(--background-black);
@@ -262,6 +268,104 @@ span {
     left: 0;
 }
 
+/*---------------------JOBS--------------------------*/
+
+.container-jobs {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    
+
+    width: 100vw;
+    height: 80vh;
+    /*
+    padding: 0 1.5rem;
+    padding-top: 1rem; */
+}
+
+.container-jobs article {
+    max-width: 90%;
+    max-height: 37vh;
+}
+
+.jobs__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border: solid 3px #000;
+}
+
+.jobs__article1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    
+}
+
+.jobs__article2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.jobs__article3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.jobs__article4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+
+/*---------------------KNOWNLEDGE--------------------------*/
+
+.container-skills {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: repeat(2, 2fr);
+    justify-items: center;
+
+    width: 100vw;
+    height: 30vh;
+    padding: 1rem 2rem;
+}
+
+.container__section {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border: solid 4px var(--background-skills);
+    background: var(--color-header);
+    border-radius: 15px;
+    height: 70%;
+    width: 70%;
+
+    box-shadow: 5px 5px 15px 5px #999    ;
+}
+
+.section__ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    color:var(--background-skills);
+    list-style: none;
+}
+
+.section__li i{
+    font-size: 3rem;
+    transition: 2s;
+}
+
+.section__li i:hover{
+    transform: scale(1.5);
+}
+
 /*---------------------------FOOTER-------------------------------------*/
 .footer {
     display: flex;
@@ -299,7 +403,10 @@ span {
     color: #555;
     border-radius: 7px;
     padding: 10px;
+
+    transition: border 0.5s;
     font-size: 1.5rem;
+
 }
 
 .form__input::placeholder {

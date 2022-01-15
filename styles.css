@@ -13,12 +13,12 @@ body {
 
 :root {
     --color-header: #EAF2F3;
-    --fondo: #ff8d71;
-    --background-body: #f2f2f2;
-    --color-main: rgb(183,76,44);
+    --fondo: #241333;
+    --background-body: #eeeeee;
+    --color-main: #923cb5;
     --color-form: #F7F9F9;
-    --background-footer: rgb(238, 238, 238);
-    --background-form: rgb(228, 228, 228);
+    --background-footer: #eeeeee;
+    --background-form: #e4e4e4;
     --background-black: #262626;
     --background-skills: #222;
 }
@@ -33,10 +33,10 @@ header {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: rgb(183,76,44);
-    background: linear-gradient(180deg, rgba(183,76,44,1) 8%, rgba(210,96,65,1) 18%, rgba(255,131,101,1) 35%, rgba(255,141,113,1) 49%);
-    background-size: 100% 100%;
+    background-color: #923cb5;
+    background-image: linear-gradient(180deg, #923cb5 0%, #000000 45%);
 }
+
 
 .nav {
     grid-column: 3/5;
@@ -78,6 +78,7 @@ a {
 #name-box {
     grid-row: 3/4;
     grid-column: 1/5;
+    align-self: start;
 
     display: flex;
     justify-content: center;
@@ -99,11 +100,11 @@ span {
 .efect::after {
     content:"";
     border-left: 2px solid var(--color-header);
-    background: var(--fondo);  
+    background: linear-gradient(180deg, #000001 0%, #000000 74%);
     right: 0;
     height: 100%;
     position: absolute;
-    animation: typing 2s infinite alternate steps(13);
+    animation: typing 2s infinite alternate steps(15);
 }
 
 @keyframes typing {
@@ -115,6 +116,18 @@ span {
     }   
 }
 
+#job {
+    grid-column: 1/5;
+    grid-row: 3/5;
+
+    align-self: center;
+    justify-self: center;
+
+    color: var(--color-header);
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
 /*Social network*/
 
 .div {
@@ -123,8 +136,7 @@ span {
 
     display: flex;
     justify-content: center;
-    
-    margin-bottom: 1rem;
+    align-self: end;
 }
 
 .div__ul {
@@ -137,7 +149,7 @@ span {
 }
 
 .div__li {
-    margin: 1rem;
+    margin: 0 1rem;
     font-size: 3.5rem;
 }
 
@@ -162,19 +174,31 @@ span {
 }
 
 /*-------------------------------------BODY--------------------------------*/
-.container {
+
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr .5fr;
+    grid-template-rows: 3fr 1fr 1fr 3fr 3fr 1fr 2fr;
     justify-items: center;
     align-items: center;
-    gap: 0.5rem;
-
+    gap: 0.8rem;
     width: 100vw;
-    height: 80vh;
-
+    height: 190vh;
     padding: 1rem 1.2rem;
+
 }
+
+.container__aside {
+    grid-row: 1/8;
+    grid-column: 1/2;
+    margin: -2rem 1rem 0 -1.2rem;
+
+    width: 100%;
+    height: 100%;
+
+
+    background-color: #923cb5;
+    background-image: linear-gradient(0deg, #461e57 0%, #000000 50%); }
 
 .container__div {
     grid-column: 2/4;
@@ -271,11 +295,6 @@ span {
 /*---------------------JOBS--------------------------*/
 
 .container-jobs {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    
-
     width: 100vw;
     height: 80vh;
     /*
@@ -283,57 +302,80 @@ span {
     padding-top: 1rem; */
 }
 
-.container-jobs article {
+.container__p-hobbies{
+    font-size: 1.7rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+
+    color: var(--color-form);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container__p-hobbies article {
     max-width: 90%;
     max-height: 37vh;
 }
 
-.jobs__img {
+.article__img {
     height: 100%;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
 
     border: solid 3px #000;
+    filter: blur(.8px);
+    transition: .2s transform;
+
+    max-height: 210.24px;
 }
 
-.jobs__article1 {
+.article__img:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+}
+
+.container__article1 {
     grid-column: 2/3;
-    grid-row: 1/2;
-    
+    grid-row: 4/5;
+    justify-self: stretch;
 }
 
-.jobs__article2 {
+.container__article2 {
     grid-column: 3/4;
-    grid-row: 1/2;
+    grid-row: 4/5;
+    justify-self: stretch;
+
 }
 
-.jobs__article3 {
+.container__article3 {
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 5/6;
+    justify-self: stretch;
+
 }
 
-.jobs__article4 {
+.container__article4 {
     grid-column: 3/4;
-    grid-row: 2/3;
-}
+    grid-row: 5/6;
+    justify-self: stretch;
 
+}
 
 /*---------------------KNOWNLEDGE--------------------------*/
+.container__p-skills {
+    font-size: 1.6rem;
+    grid-column: 1/2;
+    grid-row: 6/7;
+    justify-self: center;
 
-.container-skills {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: repeat(2, 2fr);
-    justify-items: center;
+    color: var(--color-form);
+    font-family: 'Ubuntu', sans-serif;
 
-    width: 100vw;
-    height: 30vh;
-    padding: 1rem 2rem;
 }
 
 .container__section {
     grid-column: 2/5;
-    grid-row: 1/3;
+    grid-row: 7/8;
     align-self: center;
 
     display: flex;

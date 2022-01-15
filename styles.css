@@ -302,19 +302,20 @@ span {
     padding-top: 1rem; */
 }
 
-.container__p-hobbies{
+.container__p-jobs{
     font-size: 1.7rem;
     grid-column: 1/2;
     grid-row: 3/4;
     justify-self: center;
+    
 
-    color: var(--color-form);
+    color: var(--color-header);
     font-family: 'Ubuntu', sans-serif;
 }
 
-.container__p-hobbies article {
-    max-width: 90%;
-    max-height: 37vh;
+.container__p-jobs article {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .article__img {
@@ -337,27 +338,27 @@ span {
 .container__article1 {
     grid-column: 2/3;
     grid-row: 4/5;
-    justify-self: stretch;
+    justify-self: center;
 }
 
 .container__article2 {
     grid-column: 3/4;
     grid-row: 4/5;
-    justify-self: stretch;
+    justify-self: center;
 
 }
 
 .container__article3 {
     grid-column: 2/3;
     grid-row: 5/6;
-    justify-self: stretch;
+    justify-self: center;
 
 }
 
 .container__article4 {
     grid-column: 3/4;
     grid-row: 5/6;
-    justify-self: stretch;
+    justify-self: center;
 
 }
 

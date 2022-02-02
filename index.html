@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="normalize.css">
     <script src="https://kit.fontawesome.com/003e5f5bc6.js" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
 <body>
-    <header>
+    <header id="header">
         <nav class="nav">
             <ul class="nav__ul">
                 <li class="nav__li"><a href="#about-me">Sobre mi</a></li>
@@ -21,25 +22,23 @@
                 <li class="nav__li"><a href="#knownledge">Conocimientos</a></li>
                 <li class="nav__li" ><a href="#contact">Contactame</a></li>
             </ul>
-            <ul class="nav__responsive-ul">
-                <div class="nav__responsive-button-container">
-                    <div class="nav__responsive-button">
-                        <i class="fa fa-bars"></i>
-                    </div>
+            <div class="nav__responsive">    
+                <div class="icono" id="icono">
+                    <i class="fa fa-bars"></i>
                 </div>
-                <div class="nav__li-container">
-                    <li class="nav__responsive-li"><a href="#about-me">Sobre mi</a></li>
-                    <li class="nav__responsive-li"><a href="#projects">Trabajos</a></li>
-                    <li class="nav__responsive-li"><a href="#knownledge">Conocimientos</a></li>
-                    <li class="nav__responsive-li" ><a href="#contact">Contactame</a></li>
-                </div>        
-            </ul>
+
+                <ul class="nav__responsive-ul uno" id="enlaces">
+                        <li class="nav__responsive-li"><a href="#about-me">Sobre mi</a></li>
+                        <li class="nav__responsive-li"><a href="#projects">Trabajos</a></li>
+                        <li class="nav__responsive-li"><a href="#knownledge">Conocimientos</a></li>
+                        <li class="nav__responsive-li" ><a href="#contact">Contactame</a></li>
+                </ul>
+            </div>
         </nav>
 
         <div id="name-box">
             <h1 class="first-name-box"> &#60AMICO, FEDE<span class="efect">RICO MARTIN/&#62.</span></h1>
             <h2 class="second-name-box">&#60AMICO, FEDERICO MARTIN/&#62</h2>
-
         </div>
 
         <h3 id="job"> Desarrollador</h3>
@@ -56,68 +55,72 @@
             <a href="#about-me"><i class="fas fa-angle-double-down"></i></a>
         </div>  
     </header>
-<div class="grid-container">
-    <aside class="container__aside">
-    </aside>
+    <div class="grid-container">
+        <aside class="container__aside">
+        </aside>
+        <div class="container__div" id="about-me">
+            <p>Mi nombre es Federico Amico y, como imaginarán, este es mi portafolio. <br>
+            En el año 2018, empecé mis estudios en el Instituto ORT para finalizarlos en el 2020 y obtener mi título de Técnico Analista de Sistemas, el cual complemente con cursos de desarrollo en el Gobierno y Educacion IT.<br>
+            Considero que soy una persona muy autoindependiente y autodidacta, que siempre intenta buscar nuevos desafíos para mantenerse motivado ya que creo que es uno de los pilares fundamentales para el constante crecimiento. <br>
+            Durante el año 2021 estuve viviendo en Irlanda donde busqué mejorar mi inglés y crecer personalmente viviendo en una sociedad diferente a la que estaba acostumbrado. <br>
+            Cuento con experiencia en Sistemas en el Gobierno de la Ciudad de Buenos Aires, en el area de salud.</p>
+        </div>
 
-    <div class="container__div" id="about-me">
-        <p>Mi nombre es Federico Amico y, como imaginarán, este es mi portafolio. <br>
-        En el año 2018, empecé mis estudios en el Instituto ORT para finalizarlos en el 2020 y obtener mi título de Técnico Analista de Sistemas.<br>
-        Considero que soy una persona muy autoindependiente y autodidacta, que siempre intenta buscar nuevos desafíos para mantenerse motivado ya que creo que es uno de los pilares fundamentales para el constante crecimiento. <br>
-        Durante el año 2021 estuve viviendo en Irlanda donde busqué mejorar mi inglés y mejorar personalmente viviendo en una sociedad diferente a la que estaba acostumbrado. <br>
-        Cuento con experiencia en Sistemas en el Gobierno de la Ciudad de Buenos Aires, en el area de salud.</p>
+        <button class="container__button">
+            <span class="container__span"><a href="Amico, Federico - Curriculum Vitae.pdf" target="_blank">Descargar CV</a> </span>
+        </button>
+
+        <p class="container__p-jobs" >PROYECTOS</p>
+        <article class="container__article1" id="projects"> 
+            <img src="img/galeria de imagenes.png" class="article__img">
+        </article>
+        <article class="container__article2">
+            <img src="img/pagina-codo-a-codo.png" class="article__img">
+        </article>
+        <article class="container__article3">
+            <img src="img/futbol.jpg" class="article__img">
+        </article>
+        <article class="container__article4">
+            <img src="img/futbol.jpg" class="article__img">
+        </article>
+
+        <p class="container__p-skills">TECNOLOGÍAS</p>
+        <section class="container__section" id="knownledge">
+            <ul class="section__ul">
+                <li class="section__li"><i class="fab fa-html5"></i></li>
+                <li class="section__li"><i class="fab fa-css3-alt"></i></li>
+                <li class="section__li"><i class="fab fa-python"></i></li>
+                <li class="section__li"><i class="fab fa-js-square"></i></li>
+                <li class="section__li"><i class="fab fa-java"></i></li>
+            </ul>
+        </section>
     </div>
 
-    <button class="container__button">
-        <span class="container__span"><a href="Amico, Federico - Curriculum Vitae.pdf" target="_blank">Descargar CV</a> </span>
-    </button>
-
-    <p class="container__p-jobs" id="projects">PROJECTOS</p>
-    <article class="container__article1">
-        <img src="galeria de imagenes.png" class="article__img">
-    </article>
-    <article class="container__article2">
-        <img src="pagina-codo-a-codo.png" class="article__img">
-    </article>
-    <article class="container__article3">
-        <img src="futbol.jpg" class="article__img">
-
-    </article>
-    <article class="container__article4">
-        <img src="futbol.jpg" class="article__img">
-    </article>
-
-    <p class="container__p-skills" id="knownledge">TECNOLOGÍAS</p>
-    <section class="container__section">
-        <ul class="section__ul">
-            <li class="section__li"><i class="fab fa-html5"></i></li>
-            <li class="section__li"><i class="fab fa-css3-alt"></i></li>
-            <li class="section__li"><i class="fab fa-python"></i></li>
-            <li class="section__li"><i class="fab fa-js-square"></i></li>
-            <li class="section__li"><i class="fab fa-java"></i></li>
-        </ul>
-    </section>
-</div>
-
     <footer class="footer" id="contact">
-        <form class="form">
-                <section class="form__section">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form__input" placeholder="Email">
-                </section>
-                <section class="form__section">
-                    <label for="asunto">Asunto</label>
-                    <input type="texto" id="asunto" class="form__input" placeholder="Asunto">
-                </section>
-                <section class="form__section">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea class="form__input" id="mensaje" placeholder="Mensaje"></textarea>
-                </section>
-                <section class="form__section">                    
-                    <input type="submit" class="form__input form__submit" value="Enviar">
-                </section>
+        <form class="form" action="correo.php" method="POST">
+            <section class="form__section">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="Nombre">
+            </section>
+            <section class="form__section">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="Email">
+            </section>
+            <section class="form__section">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" class="form__input" placeholder="Asunto">
+            </section>
+            <section class="form__section">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form__input" name="message" id="mensaje" placeholder="Mensaje"></textarea>
+            </section>
+            <section class="form__section">                    
+                <input type="submit" name="send" class="form__input form__submit" value="Enviar">
+            </section>
         </form>
 
     </footer>
+    <script src="main.js"> </script>
+
 </body>
 </html>

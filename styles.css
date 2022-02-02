@@ -33,7 +33,7 @@ header {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #923cb5;
+    background-color: var(--color-main);
     background-image: linear-gradient(180deg, #923cb5 0%, #000000 45%);
 }
 
@@ -75,7 +75,7 @@ a {
     background-size: 100% 3px;
 } 
 
-.nav__responsive-ul {
+.nav__responsive {
     display: none;
 }
 
@@ -134,7 +134,7 @@ span {
     justify-self: center;
 
     color: var(--color-header);
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -502,7 +502,7 @@ span {
 
 @media only screen and (max-width: 820px){ 
     .nav__li {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .grid-container {
@@ -528,101 +528,73 @@ span {
     }
 }
 
-@media only screen and (max-width: 710px){ 
+@media only screen and (max-width: 760px){ 
+    .nav__li {
+        font-size: 1.1rem;
+    }
     #name-box{
         font-size: 1rem;
     }
-
-    .container__div {
-        font-size: 1rem;
-    }
-
     .container__button {
         padding: 1rem;
     }
-
-/*
-    .efect::after {
-        display: none;
-    }
-
-    .second-name-box {
-        grid-row: 3/4;
-        grid-column: 1/5;
-        align-self: start;
-
-        display: flex;
-        justify-content: center;
-    }*/
 }
 
-@media only screen and (max-width: 600px){ 
+@media only screen and (max-width: 650px){ 
     .nav__ul {
         display: none;
     }
 
     .nav {
+        align-self: start;
+        margin-top: 2rem;
+    }
+
+    .nav__responsive {
         display: flex;
-        height: 2.094rem;
-        width: 80vw;
-        flex-direction: column;
-        margin-right: 20vw;
+        width: 100vw;
+    }
+ 
+    .icono {
+        color: #fff;
+        z-index: 100;
+        cursor: pointer;
+        margin-left: 40px;
+        font-size: 1.7rem;
     }
 
     .nav__responsive-ul {
-        display: inline-block;
-    }
+        position: absolute;
+        height: 97vh;
+        width: 100%;
 
-    .nav__responsive-button-container {
-        color: white;
-        padding-left: 2.094rem;
-        font-size: 1.5rem;
-    }
-
-    .nav__li-container {
-        position: relative;
-        top: -1000px;
-        height: 100vh;
-        background-color: #923cb5;
-        transition: all 1s;
-        z-index: 1;
-        padding-top: 1.5rem;
+        left: 0;
+        transition: all 1s ease;
         list-style: none;
-    }
 
+    }
     .nav__responsive-li {
-        padding: 0.7rem 1.2rem;
+        margin: 3rem;
+        padding-top: 2rem;
+        font-size: 1.2rem;
     }
 
-    .nav__responsive-li i {  
-        box-sizing: border-box;
-        text-align: center;
-        color: var(--color-header);
-        margin-right: 1rem;
+    .uno {
+        background-color: transparent;
+        left: -1000px;    
     }
-
-    .nav__responsive-li a {
-        color: var(--color-header);
-        text-decoration: none;
+    .dos {    
+        background: var(--color-main);
     }
-
-    .nav__responsive-ul:hover > .nav__li-container{
-        height: 88vh;
-        width: 87vw;
-        top: 0;        
-    }
-}
-
-@media only screen and (max-width: 500px){ 
+    
     .first-name-box{
         display: none;
     }
 
     .second-name-box {
         display: flex;
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
-
     .icon { 
         font-size: 3rem;
     }
@@ -633,7 +605,7 @@ span {
     }
 
     .div__li {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
 
     .grid-container {
@@ -683,24 +655,31 @@ span {
 
     .section__li i{
         font-size: 2rem;
-    }
-
+    }   
 }
 
-@media only screen and (max-width: 500px){ 
+@media only screen and (max-width: 430px){ 
+    .icono {
+        font-size: 1.5rem;
+    }
+    
     .second-name-box {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     #job {
         font-size: 1.4rem;
     }
-
+    
     .div__li {
         font-size: 2rem;
     }
 
-    .icon {
-        font-size: 2.4rem;
+    .container__div {
+        font-size: 1rem;
+    }
+
+    .container__button {
+        margin-bottom: 1rem;
     }
 }

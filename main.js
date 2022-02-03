@@ -15,3 +15,4 @@ boton.addEventListener('click', function(){
         console.log(contador);    
     }
 })
+

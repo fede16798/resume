@@ -92,6 +92,8 @@ a {
     font-family: monospace, sans-serif;
     font-size: 1.5rem;
     color: var(--color-header);
+
+    margin-bottom: 4rem;
 }
 
 .second-name-box {
@@ -135,7 +137,10 @@ span {
 
     color: var(--color-header);
     font-size: 1.9rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace, sans-serif;
+
+    padding: 1rem;
+    border: 1px solid var(--color-header);
 }
 
 /*Social network*/
@@ -387,7 +392,6 @@ span {
 .container__section {
     grid-column: 2/4;
     grid-row: 7/8;
-    align-self: center;
 
     display: flex;
     flex-direction: column;
@@ -399,7 +403,7 @@ span {
     height: 70%;
     width: 70%;
 
-    box-shadow: 5px 5px 15px 5px #999    ;
+    box-shadow: 5px 5px 15px 5px #999;
 }
 
 .section__ul {
@@ -616,9 +620,7 @@ span {
     }
 
     .container__button {
-        grid-row: 1/3;
-        align-self: end;
-        margin-bottom: 2rem;
+        margin-bottom: .4rem;
     }
 
     .article__img:hover {
@@ -649,13 +651,14 @@ span {
         justify-self: center;
     }
 
-    .container__section {
-        grid-row: 7/8;
-    } 
-
     .section__li i{
         font-size: 2rem;
     }   
+
+    .container__section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 
 @media only screen and (max-width: 430px){ 
@@ -677,9 +680,5 @@ span {
 
     .container__div {
         font-size: 1rem;
-    }
-
-    .container__button {
-        margin-bottom: 1rem;
     }
 }

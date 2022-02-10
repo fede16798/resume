@@ -405,7 +405,8 @@ span {
 .section__ul {
     display: flex;
     justify-content: space-evenly;
-
+    
+    text-align: center;
     color:var(--background-skills);
     list-style: none;
 }
@@ -417,6 +418,13 @@ span {
 
 .section__li i:hover{
     transform: scale(1.5);
+}
+
+.section__li-span {
+    display: block;
+    margin-top: .8rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
 }
 
 /*---------------------------FOOTER-------------------------------------*/
@@ -650,6 +658,10 @@ span {
     .section__li i{
         font-size: 2rem;
     }   
+    .section__li-span {
+        margin-top: .5rem;
+        font-size: 12px;
+    }
 
     .container__section {
         padding-top: 1rem;

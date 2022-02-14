@@ -430,7 +430,8 @@ span {
 /*---------------------------FOOTER-------------------------------------*/
 .footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     height: 100%;
     width: 100vw;
@@ -488,6 +489,22 @@ span {
     height: 60px;
     font-size: 2.5rem;
     border-radius: 5px;
+}
+
+.resultado {
+    margin-top: 1rem;
+    padding: 10px;
+    width: 50vw;
+    text-align: center;
+    color: var(--color-header)
+}
+
+.wrongForm {
+    background: #ca5353;
+}
+
+.correctForm {
+    background: #2d852d;
 }
 
 @media only screen and (max-width: 1025px){ 
